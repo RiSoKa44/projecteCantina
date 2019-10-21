@@ -7,11 +7,13 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/menu.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/headers.css'>
     <script src='main.js'></script>
+    <div id="contentGen">
     <div id="divHeader">
         <h1 class="nombrePrincipal">
             <?php
             echo "Cantina Pedralbes";
             ?>
         </h1>
+    </div>
     </div>
 </head>

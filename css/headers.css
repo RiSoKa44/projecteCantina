@@ -1,5 +1,26 @@
+#contentGen{
+    background-color: #39bab5;
+}
 #divHeader{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
     border-style: inherit;
     border-width: medium;
-    background-color: lightsalmon;
+    background-color: #39bab5;
+    background-image: url("../img/cantina.jpg");
+    width: auto;
+    height: 200px;
+    
+}
+.nombrePrincipal{
+    font-size: 125px;
+    color: #9D0052;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 2px #4BCBAE;
+    font-style: italic;
+    text-align: center;
 }
