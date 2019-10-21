@@ -5,7 +5,7 @@
     <?php
     $avui = date('d/m/Y', time());
     setcookie('ultimaComanda', $avui);
-    //$pedidos = $_POST['pedidos'];
+    //$pedidos = $_POST['listaProductos'];
 
     //if(file_exists('comandas/'.$avui.'.json')){
         //$pedidosJson = file_get_contents('comandas/'.$avui.'.json');
