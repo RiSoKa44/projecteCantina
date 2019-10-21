@@ -4,7 +4,7 @@
 <body>
     <?php
     echo '<div>
-            <label>Ja heu fet una comanda avui!</label>
+            <p>Ja heu fet una comanda avui!</p>
             <button onclick="location.href=\'landing.php\'">Tornar</button>
         </div>';
 
