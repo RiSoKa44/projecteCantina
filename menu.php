@@ -42,6 +42,9 @@
             <div class="grid-item">PHPPrecioUnidad</div>  
         </div>
     </div>
+    <?php 
+        echo '<button type="button" onclick="location.href=\'confirmarComanda.php\'">Comprar</button>';
+    ?>
 </body>
 <?php
     include 'footer.php';
