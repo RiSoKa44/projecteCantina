@@ -42,7 +42,7 @@
     </form>
 
     <div id="mensajeError">
-        <p id="mensaje"> </p>
+
     </div>
   </div>
 
@@ -53,23 +53,50 @@
     
 
     function validar() {
-      let todoCorrecto=false;
+      let todoCorrecto=true;
       let textoAlerta="";
 
-      let nombre = document.getElementsByName("nombre");
-      let apellido = document.getElementsByName("apellido");
-      let mail = document.getElementsByName("correo");
-      let telefono = document.getElementsByName("telefono");
+      let nombre = document.getElementsByName("nombre")[0].value;
+      let apellido = document.getElementsByName("apellido")[0].value;
+      let mail = document.getElementsByName("correo")[0].value;
+      let telefono = document.getElementsByName("telefono")[0].value;
+
+      let listaDeErrores= document.getElementsByName("mensajeError")[0];
 
       if(telefono.length!=9){
-        textoAlerta+="El telèfon es invàlid ";
+        textoAlerta+="<li>El telèfon es invàlid </li>";
+        todoCorrecto=false;
       }
       if(!mail.includes("@inspedralbes.cat")){
-        textoAlerta+="Correu invàlid ";
+        textoAlerta+="<li>Correu invàlid </li>";
+        todoCorrecto=false;
       }
-      if (nombre=="" || apellido){
+      if (nombre=="" || nombre==undefined || nombre==" "){
+        textoAlerta+="<li>El camp nom no pot estar buit</li>";
+        todoCorrecto=false;
+      }
+      if(mail=="" || mail==undefined || mail==" "){
+        textoAlerta+="<li>El camp de correu no pot estar buit</li>";
+        todoCorrecto=false;
+      }
+      if(telefono=="" || telefono==undefined || telefono==" "){
+        textoAlerta+="<li>El camp de telèfon no pot estar buit</li>";
+        todoCorrecto=false;
+      }
 
+      if(todoCorrecto){
+        let lista=document.createElement("UL");
+        let textoDeLista=document.createTextNode(textoAlerta);
+        
+        lista.appendChild(textoDeLista);
+        document.getElementById("mensajeDeError").appendChild(lista);
+        document.getElementById("mensajeDeError").style.display="compact";
       }
+      else{
+        document.getElementById("mensajeDeError").style.display="none";
+      }
+      
+      
     }
     
 
