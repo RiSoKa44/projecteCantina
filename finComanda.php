@@ -15,14 +15,14 @@ include 'header.php';
         setcookie('ultimaComanda', $avui);
         //$pedidos = $_POST['listaProductos'];
 
-        //if(file_exists('comandas/'.$avui.'.json')){
-        //$pedidosJson = file_get_contents('comandas/'.$avui.'.json');
+        //if(file_exists('comandes/'.$avui.'.json')){
+        //$pedidosJson = file_get_contents('comandes/'.$avui.'.json');
         //$arrayPedidosJson = json_decode($pedidosJson, true);
 
         //array_push($arrayPedidosJson, $pedidos);
-        //file_put_contents('comandas/'.$avui.'.json',json_encode($arrayPedidosJson));
+        //file_put_contents('comandes/'.$avui.'.json',json_encode($arrayPedidosJson));
         //}else{
-        //file_put_contents('comandas/'.$avui.'.json',json_encode($pedidos));
+        //file_put_contents('comandes/'.$avui.'.json',json_encode($pedidos));
         //}
 
         echo '<div>
