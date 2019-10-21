@@ -1,0 +1,41 @@
+#capsulaDiv{
+    border-style: inherit;
+    border-width: medium;
+}
+
+.nombreProducto{
+    border-bottom: solid;
+    border-width: medium;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.imgProd{
+    height: 125px; 
+    width: 125px;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.grid-container {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    background-color: #2196F3;
+    padding: 3px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+  }
+  .item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .item2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
