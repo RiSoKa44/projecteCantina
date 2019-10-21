@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+include 'header.php';
+?>
 
 <body>
     <?php
-    $avui = date('d/m/Y', time());
-    setcookie('ultimaComanda', $avui);
-    //$pedidos = $_POST['listaProductos'];
+    if (!isset($_POST['listaProductos'])) {
+        echo '<div>
+            <label>Error! No hi ha comandes.</label>
+        </div>';
+    }else {
+        $avui = date('d/m/Y', time());
+        setcookie('ultimaComanda', $avui);
+        //$pedidos = $_POST['listaProductos'];
 
-    //if(file_exists('comandas/'.$avui.'.json')){
+        //if(file_exists('comandas/'.$avui.'.json')){
         //$pedidosJson = file_get_contents('comandas/'.$avui.'.json');
         //$arrayPedidosJson = json_decode($pedidosJson, true);
 
         //array_push($arrayPedidosJson, $pedidos);
         //file_put_contents('comandas/'.$avui.'.json',json_encode($arrayPedidosJson));
-    //}else{
+        //}else{
         //file_put_contents('comandas/'.$avui.'.json',json_encode($pedidos));
-    //}
-    
+        //}
 
-    
-
-    echo '<div>
-            <label>Comanda confirmada correctament!</label>
-        </div>';
-
+        echo '<div>
+                <label>Comanda confirmada correctament!</label>
+            </div>';
+    }
     ?>
 </body>
+<?php
+include 'footer.php';
+?>
 
 </html>

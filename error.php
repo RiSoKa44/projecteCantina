@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<?php
+    include 'header.php';
+?>
 <body>
     <?php
     echo '<div>
@@ -10,5 +12,7 @@
 
     ?>
 </body>
-
+<?php
+    include 'footer.php';
+?>
 </html>
