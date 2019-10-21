@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
+<?php
+    include 'header.php';
+?>
 <body>
     <h1>Confirmació de comanda</h1>
     <?php 
@@ -39,5 +40,7 @@
         </form>
     </div>
 </body>
-
+<?php
+    include 'footer.php';
+?>
 </html>

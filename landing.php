@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<?php
+    include 'header.php';
+?>
 <body>
     <?php
     $avui = date('d/m/Y', time());
@@ -12,7 +14,6 @@
     }
 
     echo '
-        <h1>Cantina Pedralbes</h1>
         <h4>Av. d\'Esplugues, 40</h4>
         <div>
             <button onclick="location.href=\''.$ruta.'\'">Avançar</button>
@@ -20,5 +21,7 @@
 
     ?>
 </body>
-
+<?php
+    include 'footer.php';
+?>
 </html>
