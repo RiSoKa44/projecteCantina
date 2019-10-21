@@ -37,7 +37,7 @@
         <input type="tel"  name="telefono"><br>
         Correu : <br>
         <input type="email" name="correo"><br><br>
-        <input type="button" name="confirmar" value="Confirmar">
+        <input type="submit" name="confirmar" value="Confirmar">
       </fieldset>
     </form>
 
