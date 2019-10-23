@@ -2,7 +2,7 @@
     background-color: #39bab5;
 }
 #divHeader{
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
@@ -11,16 +11,16 @@
     background-color: #39bab5;
     background-image: url("../img/cantina.jpg");
     width: auto;
-    height: 200px;
+    height: 7vw;
     
 }
 .nombrePrincipal{
-    font-size: 125px;
-    color: #9D0052;
+    font-size: 5vw;
+    color: #4BCBAE;
     text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    text-shadow: 3px 2px #4BCBAE;
+    text-shadow: 3px 2px #9D0052;
     font-style: italic;
     text-align: center;
 }
