@@ -2,3 +2,41 @@
     width: 700px;
     height: 10%;
 }
+.imgCab{
+    border-radius: 1vw;
+    border: 2px solid #ddd;
+    padding: 5px;
+    width: 150px;
+}
+.descFoto{
+    font-family: fantasy;
+    color: #39bab5;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 2px #000000;
+    font-size: 3vw;
+}
+.underFoto{
+    font-size: 2vw;
+}
+
+.btnLand{
+    background-color: #1ba6a1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.1vw;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 1vw;
+    height: 2vw;
+    margin-top: 1%;
+    margin-right: 40%;
+    margin-left: 40%;
+    width: 20%;
+    color: white;
+    text-align: center;
+}
+.btnLand:hover{
+    opacity: 1;
+}

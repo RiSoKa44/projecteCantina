@@ -4,7 +4,8 @@
 <?php
     include 'header.php';
 ?>
-
+<body>
+<div class="general">
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -18,26 +19,26 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="img/puertabuena.jpg" alt="Los Angeles" style="width:100%;">
+        <img class="imgCab" src="img/puertabuena.jpg" alt="Los Angeles" style="width:100%;">
         <div class="carousel-caption">
-          <h3>Cantina Pedralbes</h3>
-          <p>Av. d\'Esplugues, 40</p>
+          <h3 class="descFoto">Cantina Pedralbes</h3>
+          <p class="underFoto">Av. d'Esplugues, 40</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="img/zonabuena.jpg" alt="Chicago" style="width:100%;">
+        <img class="imgCab" src="img/zonabuena.jpg" alt="Chicago" style="width:100%;">
         <div class="carousel-caption">
-          <h3>Cantina Pedralbes</h3>
-          <p>Av. d\'Esplugues, 40</p>
+          <h3 class="descFoto">Cantina Pedralbes</h3>
+          <p class="underFoto">Av. d'Esplugues, 40</p>
         </div>
       </div>
     
       <div class="item">
-        <img src="img/panoramic.jpg" alt="New York" style="width:100%;">
+        <img class="imgCab" src="img/panoramic.jpg" alt="New York" style="width:100%;">
         <div class="carousel-caption">
-          <h3>Cantina Pedralbes</h3>
-          <p>Av. d\'Esplugues, 40</p>
+          <h3 class="descFoto">Cantina Pedralbes</h3>
+          <p class="underFoto">Av. d'Esplugues, 40</p>
         </div>
       </div>
   
@@ -55,30 +56,19 @@
   </div>
 </div>
 
-
-
-
-<body>
+<div>
     <?php
-    $avui = date('d/m/Y', time());
-    $ruta;
-    if(isset($_COOKIE['ultimaComanda']) && $_COOKIE['ultimaComanda'] == $avui){
-        $ruta = 'error.php';
-    }else{
-        $ruta = 'menu.php';
-    }
-
-    echo '
-        <div>
-            <button onclick="location.href=\''.$ruta.'\'">Avançar</button>
-        </div>';
-
+        $avui = date('d/m/Y', time());
+        $ruta;
+        if(isset($_COOKIE['ultimaComanda']) && $_COOKIE['ultimaComanda'] == $avui){
+            $ruta = 'error.php';
+        }else{
+            $ruta = 'menu.php';
+        }
     ?>
+    <button class="btnLand" onclick="location.href=\''.$ruta.'\'">Avançar</button>
+</div>
 </body>
-
-
-
-
 
 <?php
     include 'footer.php';

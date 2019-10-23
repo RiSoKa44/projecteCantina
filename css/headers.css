@@ -5,7 +5,7 @@
     margin-top: 0px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-style: inherit;
     border-width: medium;
     background-color: #39bab5;
@@ -16,7 +16,7 @@
 }
 .nombrePrincipal{
     font-size: 5vw;
-    color: #4BCBAE;
+    color: #39bab5;
     text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: 1.5px;
