@@ -10,7 +10,7 @@ include 'header.php';
         echo '<div>
             <label>Error! No hi ha comandes.</label>
         </div>';
-    }else {
+    } else {
         $avui = date('d/m/Y', time());
         setcookie('ultimaComanda', $avui);
         //$pedidos = $_POST['listaProductos'];
