@@ -9,16 +9,32 @@ function validarFormulario() {
     let mail = document.getElementById("correo").value;
     let telefono = document.getElementById("telefono").value;
 
+
     let listaDeErrores = document.getElementById("mensajeError");
     //Longitud del teléfono
     if (telefono.length != 9) {
-        textoAlerta += "<li>El telèfon es invàlid </li>";
+        textoAlerta += "<li>El format del telèfon no és vàlid </li>";
         todoCorrecto = false;
     }
     //Dominio correcto
     if (!mail.includes("@inspedralbes.cat")) {
-        textoAlerta += "<li>Correu invàlid </li>";
+        textoAlerta += "<li>Aquest correu no és vàlid </li>";
         todoCorrecto = false;
+    }
+
+    //Comprobar que el telefono contiene letras
+    if (telefono != "" && telefono != undefined && telefono != " "){
+        let telefonoConCaracteres=false;
+        for(i=0; i<telefono.length; i++){
+            if (!/^([0-9])*$/.test(telefono.charAt(i))){
+                telefonoConCaracteres=true;
+            }
+         }
+         if(telefonoConCaracteres){
+            textoAlerta += "<li>El número de telèfon no és vàlid </li>";
+            todoCorrecto = false;
+         }
+         
     }
     //Saber si los campos están vacíos
     if (nombre == "" || nombre == undefined || nombre == " ") {
