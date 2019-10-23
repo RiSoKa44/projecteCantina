@@ -1,6 +1,12 @@
 #capsulaDiv{
+    width: 75%;
     border-style: inherit;
     border-width: medium;
+}
+.addCesta{
+  float: right;
+  text-align: center;
+  color: #39bab5; 
 }
 
 .nombreProducto{
@@ -17,10 +23,10 @@
     margin-bottom: 5px;
 }
 .grid-container {
-    width: 50%;
+    width: 70%;
     margin: auto;
     display: grid;
-    grid-template-columns: 30% 35% 35%;
+    grid-template-columns: 35% 35% 30%;
     background-color: #2196F3;
     padding: 3px;
   }
