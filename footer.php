@@ -26,7 +26,7 @@
       <div class="col-md-3 mb-md-0 mb-3">
 
         <!-- Links -->
-        <h5 class="text-uppercase">Mapa</h5>
+        <h5 class="text-uppercase">Links</h5>
 
         <ul class="list-unstyled">
         <li>
@@ -43,7 +43,7 @@
        <div class="col-md-3 mb-md-0 mb-3">
 
         <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
+        <h5 class="text-uppercase">Mapa</h5>
 
         <ul class="list-unstyled">
         <li>
