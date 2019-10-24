@@ -18,7 +18,7 @@
                 $elemento = $menuPati[$i];
                 echo '<div class="grid-container">
                         <div class="grid-item item1"><img class="imgProd" src="img/'.$elemento[1].'"></div>
-                        <div class="grid-item item2">'.$elemento[0].'</div>
+                        <div class="grid-item item2 nmbtxt">'.$elemento[0].'</div>
                         <div class="grid-item">PHPUNIDADES</div>
                         <div class="grid-item">'.str_replace('.',',',$elemento[2]).' €</div>
                         <div class="grid-item item2">
@@ -45,7 +45,7 @@
         ?>
     </div>
     <?php 
-        echo '<button type="button" onclick="location.href=\'confirmarComanda.php\'">Comprar</button>';
+        echo '<button class="btnMenu" type="button" onclick="location.href=\'confirmarComanda.php\'">Mirar carro y comprar</button>';
     ?>
 </body>
 <?php
