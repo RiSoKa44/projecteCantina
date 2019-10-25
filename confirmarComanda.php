@@ -11,14 +11,13 @@ include 'header.php';
   
   #Comprobar si la cookie pedidos existe formar array a través de json
   if(isset($_COOKIE['pedidos'])){
+    #Leer la la COOKIE que es una string en formato json y castearla a array
     $listaProductos= (array)json_decode($_COOKIE['pedidos']);
-    print_r($listaProductos);
   }else{
     #Redirigir a error 
-    $ruta = 'error.php';
+    header('Location: error.php');  
   }
-  #$listaProductos = $_POST['listaProductos'];
-  $listaProductos = ['Bocadillo de Chope' => array(2, 1.20, 2.40)];
+
   $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th>Producte</th><th>Quantitat</th><th>Preu Unitari</th><th>Preu Total</th></tr></thead>";
 
   $precioTotal = 0;

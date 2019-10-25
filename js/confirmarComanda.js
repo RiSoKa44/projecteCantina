@@ -51,12 +51,21 @@ function validarFormulario() {
     }
 
     if (todoCorrecto) {
-        // textoAlerta="";
         document.getElementById("mensajeError").style.display = "none";
-        //Formar json de usuario y pedidos
-        //console.log(readCookie("pedidos"));
+        //Crear objeto usuario
+        let usuarioObj={
+                "mail": mail,
+                "nombre":nombre,
+                "apellido":apellido,
+                "telefono":telefono,
+        };
+
+        //Unir a usuarioObj sus pedidos
+        //Guardar cookie con todos los datos completos del pedido
+        document.cookie = "datosPedido="+unirPedidoAUsuario(usuarioObj);
+        //alert(unirPedidoAUsuario(usuarioObj));
         //Cambiar de página
-        //window.location.href = "finComanda.php";
+        location.href = "finComanda.php";
     }
     else {
         textoAlerta += "</ul>";
@@ -66,13 +75,29 @@ function validarFormulario() {
 
 }
 
+//Leer la cookie y devolver su valor
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
         var c = ca[i];
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        if (c.indexOf(nameEQ) == 0){
+            return c.substring(nameEQ.length,c.length);
+        } 
     }
     return null;
 }
+
+
+//Función que coge el objeto de usuruario, recoge los datos del pedido con las cookies y los junta
+function unirPedidoAUsuario(usuarioObj){
+    //Variable de texto que guarda un formato JSON
+    let usuarioJSON='{"'+usuarioObj["mail"]+'":{"nombre":"'+usuarioObj["nombre"]+'","apellido":"'+usuarioObj["apellido"]+'","telefono":'+usuarioObj["telefono"]+',"pedido":[';
+    //Leer la cookie de pedidos y la une a la variable de texto JSON
+    usuarioJSON+=readCookie("pedidos")+"]}}";
+    //Devuelve el texto en formato JSON
+    return usuarioJSON;
+
+}
+
