@@ -64,8 +64,9 @@
         }else{
             $ruta = 'menu.php';
         }
+        echo '<button class="btnLand" onclick="location.href=\''.$ruta.'\'">Avançar</button>';
     ?>
-    <button class="btnLand" onclick="location.href=\''.$ruta.'\'">Avançar</button>
+    
 </div>
 </body>
 

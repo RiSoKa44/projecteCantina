@@ -20,16 +20,16 @@
                         <div class="grid-item item1"><img class="imgProd" src="img/'.$elemento[1].'"></div>
                         <div class="grid-item item2 nmbtxt">'.$elemento[0].'</div>
                         <div class="grid-item">
-                        <select class="myHtmlSelectBox" name="my_HtmlSelectBox">
-                            <option selected="yes">1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>                    
+                        <select class="myHtmlSelectBox" id="selectMenuPati'.$i.'">
+                            <option selected="yes" value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select></div>
                         <div class="grid-item">'.str_replace('.',',',$elemento[2]).' €</div>
                         <div class="grid-item item2">
-                            <button class="addCesta" type="button" onclick="addCesta(\''.$elemento[0].'\',\''.$elemento[1].'\', \''.$elemento[2].'\')">Añadir a la cesta</button>
+                            <button class="addCesta" type="button" onclick="addCesta(\''.$i.'\',\''.$elemento[0].'\', \''.$elemento[2].'\')">Añadir a la cesta</button>
                         </div>  
                     </div>';
             }
@@ -40,11 +40,18 @@
                 $elemento = $menuDinar[$i];
                 echo '<div class="grid-container">
                         <div class="grid-item item1"><img class="imgProd" src="img/'.$elemento[1].'"></div>
-                        <div class="grid-item item2">'.$elemento[0].'</div>
-                        <div class="grid-item">PHPUNIDADES</div>
+                        <div class="grid-item item2 nmbtxt">'.$elemento[0].'</div>
+                        <div class="grid-item">
+                        <select class="myHtmlSelectBox" id="selectMenuDinar'.$i.'">
+                            <option selected="yes" value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>                    
+                        </select></div>
                         <div class="grid-item">'.str_replace('.',',',$elemento[2]).' €</div>
                         <div class="grid-item item2">
-                            <button class="addCesta" type="button" onclick="addCesta(\''.$elemento[0].'\',\''.$elemento[1].'\', \''.$elemento[2].'\')">Añadir a la cesta</button>
+                            <button class="addCesta" type="button" onclick="addCesta(\''.$i.'\',\''.$elemento[0].'\',\''.$elemento[1].'\', \''.$elemento[2].'\')">Añadir a la cesta</button>
                         </div>  
                     </div>';
             }
@@ -52,8 +59,10 @@
         ?>
     </div>
     <?php 
-        echo '<button class="btnMenu" type="button" onclick="location.href=\'confirmarComanda.php\'">Mirar carro y comprar</button>';
+        echo '<button class="btnMenu" type="button" onclick="comprar()">Mirar carro y comprar</button>';
     ?>
+
+    <script type="text/javascript" src="js/menu.js"></script>
 </body>
 <?php
     include 'footer.php';
