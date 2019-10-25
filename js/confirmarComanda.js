@@ -53,8 +53,10 @@ function validarFormulario() {
     if (todoCorrecto) {
         // textoAlerta="";
         document.getElementById("mensajeError").style.display = "none";
+        //Formar json de usuario y pedidos
+        //console.log(readCookie("pedidos"));
         //Cambiar de página
-        window.location.href = "finComanda.php";
+        //window.location.href = "finComanda.php";
     }
     else {
         textoAlerta += "</ul>";
@@ -62,4 +64,15 @@ function validarFormulario() {
         document.getElementById("mensajeError").style.display = "compact";
     }
 
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
 }
