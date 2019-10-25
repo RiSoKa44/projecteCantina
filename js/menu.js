@@ -18,18 +18,36 @@ function addCesta(id, nombre, preu) {
     }
 
     if (arrayPedidos.has(nombre)) {
-        var cantidadMap = arrayPedidos.get(nombre)[1];
-        arrayPedidos.set(nombre, [preu, cantidadMap + cantidad]);
+        var cantidadMap = arrayPedidos.get(nombre)[0];
+        arrayPedidos.set(nombre, [cantidadMap + cantidad, +preu, (cantidadMap+cantidad) * preu]);
     } else {
-        arrayPedidos.set(nombre, [preu, +cantidad]);
+        arrayPedidos.set(nombre, [+cantidad, +preu, cantidad * preu]);
     }
-    printKeys(arrayPedidos);
+
+    actualizarCestaCompra();
 };
+
+function actualizarCestaCompra(){
+    arrayPedidos.forEach(function(valor, clave){
+        console.log(clave +' - '+valor[0]);
+    });
+}
 
 function comprar(){
     if(arrayPedidos.size == 0){
         alert('La seva cistella està buida');
     }else{
-        
+        document.cookie = "pedidos="+JSON.stringify((mapToObj()));
+        location.href = 'confirmarComanda.php';
     }
-}
+};
+
+function mapToObj() {
+    let obj = {};
+
+    arrayPedidos.forEach(function(value, key){
+        obj[key] = value
+    });
+
+    return obj;
+};
