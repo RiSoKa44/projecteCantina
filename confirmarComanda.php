@@ -10,7 +10,7 @@ include 'header.php';
   <?php
   #$listaProductos = $_POST['listaProductos'];
   $listaProductos = ['Bocadillo de Chope' => array(2, 1.20, 2.40)];
-  $textoHTML = "<div> <table><thead><tr><th>Producte</th><th>Quantitat</th><th>Preu Unitari</th><th>Preu Total</th></tr></thead>";
+  $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th>Producte</th><th>Quantitat</th><th>Preu Unitari</th><th>Preu Total</th></tr></thead>";
   $precioTotal = 0;
 
   #Recorrer el array de productos seleccionados
@@ -24,21 +24,22 @@ include 'header.php';
   }
 
   $textoHTML .= "</table>";
-  $textoHTML .= "<p>El preu Total es : " . $precioTotal . "</p><br></div>";
+  $textoHTML .= "<p class='totalPrecioTxt'>Preu total: &nbsp &nbsp " . $precioTotal . "€</p><br></div>";
   echo $textoHTML;
   ?>
 
   <div>
     <form id="formularioUsuario">
       <legend>Informació de l'usuari:</legend>
-      Nom :<br>
+      <label>Nom:</label><br>
       <input type="text" name="nombre" id="nombre" required><br>
-      Cognom:<br>
+      <label>Cognom:</label><br>
       <input type="text" name="apellido" id="apellido"><br>
-      Telèfon : <br>
+      <label>Telèfon:</label><br>
       <input type="tel" name="telefono" id="telefono" required><br>
-      Correu : <br>
+      <label>Correu:</label><br>
       <input type="email" name="correo" id="correo" required><br><br>
+      <button id="confirmar" onclick="validarFormulario()">Confirmar</button>
     </form>
     <!-- El botón del forms está fuera porque sinó reinicia la página cuando haces click 
         Este botón utiliza el require pero borra el formulario, no vale
