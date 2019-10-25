@@ -25,7 +25,7 @@
 }
 
 .grid-container {
-  width: 70%;
+  width: 50%;
   margin: auto;
   display: grid;
   grid-template-columns: 35% 35% 30%;
@@ -41,10 +41,9 @@
   text-align: left;
 }
 .nmbtxt{
-  font-size: 1.7vw;
+  font-size: 1.2vw;
   font-weight: bold;
-  text-shadow: 0.05em 0.05em 0.1em black;
-  font-family: serif;
+  font-family: Arial,sans-serif;
   word-spacing: 0.4vw;
 }
 .item1 {
@@ -76,10 +75,21 @@
   margin-right: 40%;
   margin-left: 45%;
   margin-bottom: 2vw;
-  width: 40%;
+  width: 30%;
   color: white;
 }
 
 .btnMenu:hover{
   opacity: 1;
+}
+
+.myHtmlSelectBox{
+  text-align-last:center;
+  padding-right: 5vw;
+  background: white;
+  border: black;
+  font-size: 1vw;
+  height: 3vw;
+  padding: 0.5vw;
+  width: 10vw;
 }

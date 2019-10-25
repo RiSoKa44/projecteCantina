@@ -7,7 +7,7 @@
     <div id="capsulaDiv" >
         <?php
             $menuPati = [
-                ['Bocata jamón','imgBocata.jpg', 2.00]
+                ['BOCATA DE JAMÓN','imgBocata.jpg', 2.00]
             ];
             $menuDinar = [
                 ['Bocata chorizo','imgBocata.jpg', 3.59]
@@ -19,7 +19,14 @@
                 echo '<div class="grid-container">
                         <div class="grid-item item1"><img class="imgProd" src="img/'.$elemento[1].'"></div>
                         <div class="grid-item item2 nmbtxt">'.$elemento[0].'</div>
-                        <div class="grid-item">PHPUNIDADES</div>
+                        <div class="grid-item">
+                        <select class="myHtmlSelectBox" name="my_HtmlSelectBox">
+                            <option selected="yes">1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>                    
+                        </select></div>
                         <div class="grid-item">'.str_replace('.',',',$elemento[2]).' €</div>
                         <div class="grid-item item2">
                             <button class="addCesta" type="button" onclick="addCesta(\''.$elemento[0].'\',\''.$elemento[1].'\', \''.$elemento[2].'\')">Añadir a la cesta</button>
