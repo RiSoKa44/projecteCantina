@@ -64,14 +64,7 @@ include 'header.php';
             <div class="gridListaItem">
                 <div class="cestaImpostor">
                     <h2 class="listaCompra">Cesta de la compra</h2>
-                    <ul id="listaCompra">
-                        <li class="list-group-item mx-4">
-                            <label class="fontNormal">Bocata de Jamón</label>
-                            <button class="btnCarrito" > - </button>
-                            <label class="fontNormal" id="">3</label>
-                            <button class="btnCarrito"> + </button>
-                        </li>
-                    </ul>
+                    <ul id="listaCompra"></ul>
                 </div>
             </div>
         </div>

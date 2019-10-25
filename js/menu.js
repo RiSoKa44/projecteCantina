@@ -28,8 +28,16 @@ function addCesta(id, nombre, preu) {
 };
 
 function actualizarCestaCompra(){
+    var listaCompra = document.getElementById("listaCompra");
+    listaCompra.innerHTML = '';
     arrayPedidos.forEach(function(valor, clave){
-        console.log(clave +' - '+valor[0]);
+        var li = document.createElement("li");
+        li.className = 'list-group-item mx-4';
+        li.innerHTML = '<label class="fontNormal">'+clave+'</label>'+
+                        '<button class="btnCarrito" > - </button>'+
+                        '<label class="fontNormal">'+valor[0]+'</label>'+
+                        '<button class="btnCarrito"> + </button>';
+        listaCompra.appendChild(li);
     });
 }
 
