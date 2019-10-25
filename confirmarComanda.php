@@ -11,7 +11,8 @@ include 'header.php';
   
   #Comprobar si la cookie pedidos existe formar array a través de json
   if(isset($_COOKIE['pedidos'])){
-    $listaProductos= json_decode($_COOKIE['pedidos']);
+    $listaProductos= (array)json_decode($_COOKIE['pedidos']);
+    print_r($listaProductos);
   }else{
     #Redirigir a error 
     $ruta = 'error.php';
