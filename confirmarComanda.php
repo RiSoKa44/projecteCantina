@@ -8,9 +8,18 @@ include 'header.php';
   <h1>Confirmació de comanda</h1>
 
   <?php
+  
+  #Comprobar si la cookie pedidos existe formar array a través de json
+  if(isset($_COOKIE['pedidos'])){
+    $listaProductos= json_decode($_COOKIE['pedidos']);
+  }else{
+    #Redirigir a error 
+    $ruta = 'error.php';
+  }
   #$listaProductos = $_POST['listaProductos'];
   $listaProductos = ['Bocadillo de Chope' => array(2, 1.20, 2.40)];
   $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th>Producte</th><th>Quantitat</th><th>Preu Unitari</th><th>Preu Total</th></tr></thead>";
+
   $precioTotal = 0;
 
   #Recorrer el array de productos seleccionados
@@ -58,7 +67,7 @@ include 'header.php';
   </div>
 
   <!-- Comprobacions en javaScript HTML4 -->
-  <script type="text/javascript" src="js/validacionesJS.js"></script>
+  <script type="text/javascript" src="js/confirmarComanda.js"></script>
 
 </body>
 <?php

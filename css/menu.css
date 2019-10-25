@@ -149,3 +149,6 @@
   padding: 0.1vw 0.6vw;
   cursor: pointer;
 }
+.fontNormal{
+  font-weight: normal !important;
+}
