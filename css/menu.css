@@ -19,23 +19,30 @@
 }
 
 .imgProd {
-  margin-left: 3vw;
+  margin-left: 1.4vw;
   height: 6vw;
   max-width: 10vw;
 }
-
-.grid-container {
-  width: 50%;
+.gridGeneral{
+  width: 100%;
   margin: auto;
   display: grid;
-  grid-template-columns: 35% 35% 30%;
+  grid-template-columns: 75% 25%;
+  background-color: #9BB4E9;
+  padding: 0.2vw;
+}
+.grid-container {
+  width: 70%;
+  margin-left: 15vw;
+  display: grid;
+  grid-template-columns: 35% 35% 15%;
   background-color: #9BB4E9;
   padding: 0.5vw;
 }
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
-  border: 0.1vw solid rgba(0, 0, 0, 0.8);
+  border: 0.01vw solid rgba(63, 62, 62, 0.8);
   padding: 0.5vw;
   font-size: 1.4vw;
   text-align: left;
@@ -55,9 +62,28 @@
   grid-column-start: 2;
   grid-column-end: 4;
 }
-
+.itemDinero{
+  font-size: 1.4vw; 
+  color: #001d1c;
+}
 .oculto {
   display: none;
+}
+
+.cestaImpostor{
+  border-left: black;
+  border: 0.1vw solid;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+}
+.listaCompra{
+  text-decoration: underline overline wavy #39bab5;
+  margin-left: 1vw;
+  margin-top: 0.8vw;
+  font-size: 2vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;  
 }
 
 .btnMenu{
@@ -69,13 +95,13 @@
   border-radius: 0.1vw;
   opacity: 0.9;
   text-align: center;
-  font-size: 2vw;
-  height: 4vw;
-  margin-top: 1%;
-  margin-right: 40%;
-  margin-left: 45%;
+  font-size: 1vw;
+  height: 3vw;
+  margin-top: 0.1vw;
+  margin-right: 40vw;
+  margin-left: 54.5vw;
   margin-bottom: 2vw;
-  width: 30%;
+  width: 15vw;
   color: white;
 }
 
@@ -84,12 +110,42 @@
 }
 
 .myHtmlSelectBox{
+  text-align: center;
   text-align-last:center;
+
   padding-right: 5vw;
-  background: white;
-  border: black;
+  position: relative;
+  direction: initial;
+  border: 3em, black;
+  background-color: #DEDEDE;
   font-size: 1vw;
   height: 3vw;
-  padding: 0.5vw;
+  padding: 0.7vw;
   width: 10vw;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.list-group-item{
+  font-size: 1vw;
+  border: none;
+  text-align: left;
+  align-content: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 4px;
+  display: list-item;
+}
+.btnCarrito{
+  background-color: #39bab5; /* Green */
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  margin: 0.4vw 0.1vw;
+  padding: 0.1vw 0.6vw;
+  cursor: pointer;
 }
