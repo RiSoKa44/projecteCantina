@@ -5,6 +5,8 @@
 ?>
 <body>
     <div id="capsulaDiv" >
+    <div class="gridGeneral">
+        <div class="gridListaItem">
         <?php
             $menuPati = [
                 ['BOCATA DE JAMÓN','imgBocata.jpg', 2.00]
@@ -21,13 +23,13 @@
                         <div class="grid-item item2 nmbtxt">'.$elemento[0].'</div>
                         <div class="grid-item">
                         <select class="myHtmlSelectBox" id="selectMenuPati'.$i.'">
-                            <option selected="yes" value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option class="optionSel" selected="yes" value="1">1</option>
+                            <option class="optionSel" value="2">2</option>
+                            <option class="optionSel" value="3">3</option>
+                            <option class="optionSel" value="4">4</option>
+                            <option class="optionSel" value="5">5</option>
                         </select></div>
-                        <div class="grid-item">'.str_replace('.',',',$elemento[2]).' €</div>
+                        <div class="grid-item itemDinero">'.str_replace('.',',',$elemento[2]).' €</div>
                         <div class="grid-item item2">
                             <button class="addCesta" type="button" onclick="addCesta(\''.$i.'\',\''.$elemento[0].'\', \''.$elemento[2].'\')">Añadir a la cesta</button>
                         </div>  
@@ -57,9 +59,23 @@
             }
             echo '</div>';
         ?>
+        </div>
+        <div class="gridListaItem">
+        <div class="cestaImpostor">
+        <h2 class="listaCompra">Cesta de la compra</h2>
+            <ul>
+                <li class="list-group-item mx-4">
+                    Bocata de Jamón
+                    <button class="btnCarrito" X > - </button>
+                    3
+                    <button class="btnCarrito" X > + </button>
+                </li>
+            </ul>   
+        </div>
+        </div>
     </div>
     <?php 
-        echo '<button class="btnMenu" type="button" onclick="comprar()">Mirar carro y comprar</button>';
+        echo '<button class="btnMenu" type="button" onclick="comprar()">Ir a pagar</button>';
     ?>
 
     <script type="text/javascript" src="js/menu.js"></script>
