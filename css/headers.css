@@ -9,7 +9,7 @@
     border-style: inherit;
     border-width: medium;
     background-color: #39bab5;
-    background-image: url("../img/visual3.jpg");
+    background-image: url("../img/listaprodbis.jpg");
     width: auto;
     height: 7vw;
     
@@ -20,7 +20,7 @@
     text-decoration: underline;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    text-shadow: 3px 2px #9D0052;
+    text-shadow: 3px 2px black;
     font-style: italic;
     text-align: center;
 }
