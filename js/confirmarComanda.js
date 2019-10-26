@@ -63,7 +63,6 @@ function validarFormulario() {
         //Unir a usuarioObj sus pedidos
         //Guardar cookie con todos los datos completos del pedido
         document.cookie = "datosPedido="+unirPedidoAUsuario(usuarioObj);
-        //alert(unirPedidoAUsuario(usuarioObj));
         //Cambiar de página
         location.href = "finComanda.php";
     }
@@ -93,9 +92,9 @@ function readCookie(name) {
 //Función que coge el objeto de usuruario, recoge los datos del pedido con las cookies y los junta
 function unirPedidoAUsuario(usuarioObj){
     //Variable de texto que guarda un formato JSON
-    let usuarioJSON='{"'+usuarioObj["mail"]+'":{"nombre":"'+usuarioObj["nombre"]+'","apellido":"'+usuarioObj["apellido"]+'","telefono":'+usuarioObj["telefono"]+',"pedido":[';
+    let usuarioJSON='"'+usuarioObj["mail"]+'":{"nombre":"'+usuarioObj["nombre"]+'","apellido":"'+usuarioObj["apellido"]+'","telefono":'+usuarioObj["telefono"]+',"pedido":[';
     //Leer la cookie de pedidos y la une a la variable de texto JSON
-    usuarioJSON+=readCookie("pedidos")+"]}}";
+    usuarioJSON+=readCookie("pedidos")+"]}";
     //Devuelve el texto en formato JSON
     return usuarioJSON;
 

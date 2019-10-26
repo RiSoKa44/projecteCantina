@@ -48,7 +48,6 @@ include 'header.php';
       <input type="tel" name="telefono" id="telefono" required><br>
       <label>Correu:</label><br>
       <input type="email" name="correo" id="correo" required><br><br>
-      <button id="confirmar" onclick="validarFormulario()">Confirmar</button>
     </form>
     <!-- El botón del forms está fuera porque sinó reinicia la página cuando haces click 
         Este botón utiliza el require pero borra el formulario, no vale

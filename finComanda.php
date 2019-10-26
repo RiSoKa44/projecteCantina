@@ -6,24 +6,36 @@ include 'header.php';
 
 <body>
     <?php
+    #Comprobar que hay pedidos
     if (!isset($_COOKIE['datosPedido'])) {
         echo '<div>
             <label>Error! No hi ha comandes.</label>
         </div>';
     } else {
-        $avui = date('d/m/Y', time());
+        #Crear cookie para no poder pedir dos veces en un mismo día
+        $avui = date('d-m-Y', time());
         setcookie('ultimaComanda', $avui);
-        
-        $datosPedido =json_decode($_COOKIE['datosPedido']);
 
-        if(file_exists('admin/comandes/comanda_'.$avui.'.json')){
-            $datosPedidoJson = file_get_contents('admin/comandes/comanda_'.$avui.'.json');
-            $arrayPedidosJson = json_decode($datosPedidoJson, true);
+        #Coger la cookie que contiene una string con el pedido
+        $datosPedido = $_COOKIE['datosPedido'];
 
-            array_push($arrayPedidosJson, $datosPedido);
-            file_put_contents('admin/comandes/comanda_'.$avui.'.json',json_encode($arrayPedidosJson));
-        }else{
-            file_put_contents('admin/comandes/comanda_'.$avui.'.json',json_encode($datosPedido));
+        #Comrpobar si ya se han hecho pedidos hoy y si el fichero existe
+        #Si existe, coge los datos del fichero y les une los nuevos datos del usuario con su pedido
+        if (file_exists('admin/comandes/comanda_' . $avui . '.json')) {
+
+            #Recoger los datos del fichero en formato texto
+            $datosPedidoJson = file_get_contents('admin/comandes/comanda_' . $avui . '.json');
+            #Quitar los {} del principio y del final del texto
+            $datosPedidoJson = substr($datosPedidoJson, 1, strlen($datosPedidoJson) - 2);
+            #Unir datos nuevos a los antiguos
+            $datosPedidoJson .= ',' . $datosPedido;
+            #Formatar para JSON
+            $textoEnJson = "{" . $datosPedidoJson . "}";
+            #Añadir al fichero JSON final
+            file_put_contents('admin/comandes/comanda_' . $avui . '.json', $textoEnJson);
+        } else {
+            $textoEnJson = "{" . $datosPedido . "}";
+            file_put_contents('admin/comandes/comanda_' . $avui . '.json', $textoEnJson);
         }
 
         echo '<div>
@@ -31,23 +43,7 @@ include 'header.php';
             </div>';
     }
     ?>
-    <script>
-        // SCRIPT DE PRUEBA PARA COMPROBAR QUE SE LEE LA COOKIE 
-        console.log(readCookie("datosPedido"));
 
-        function readCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                if (c.indexOf(nameEQ) == 0){
-                    return c.substring(nameEQ.length,c.length);
-                } 
-            }
-            return null;
-        }
-    </script>
 </body>
 <?php
 include 'footer.php';

@@ -1,9 +1,10 @@
 {"a@inspedralbes.cat":
-    {"nombre":Javier,
-        "apellido":hola,
+    {"nombre":"Javier",
+        "apellido":"hola",
         "teléfono":615487532,
         "pedido":
         [{"Bocata chorizo":
                 [3,3.59,10.77]
         }]
+    }
 }
