@@ -18,7 +18,7 @@ include 'header.php';
 
         #Coger la cookie que contiene una string con el pedido
         $datosPedido = $_COOKIE['datosPedido'];
-        $ruta = 'admin'.DIRECTORY_SEPARATOR.'comandes/comanda_' . $avui . '.json';
+        $ruta = 'admin'.DIRECTORY_SEPARATOR.'comandes'.DIRECTORY_SEPARATOR.'comanda_' . $avui . '.json';
         #Comrpobar si ya se han hecho pedidos hoy y si el fichero existe
         #Si existe, coge los datos del fichero y les une los nuevos datos del usuario con su pedido
         if (file_exists($ruta)) {
