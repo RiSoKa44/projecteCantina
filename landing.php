@@ -65,7 +65,7 @@
         }else{
             $ruta = 'menu.php';
         }
-        echo '<button class="btnLand" onclick="location.href=\''.$ruta.'\'">Accés administador</button>';
+        echo '<button class="btnLand" onclick="location.href=\'admin\'">Accés administador</button>';
         echo '<button class="btnLand" onclick="location.href=\''.$ruta.'\'">Accés usuari</button>';
     ?>
     
