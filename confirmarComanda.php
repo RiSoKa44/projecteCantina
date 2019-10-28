@@ -36,8 +36,9 @@ include 'header.php';
   $textoHTML .= "<p class='totalPrecioTxt'>Preu total: &nbsp &nbsp " . $precioTotal . "€</p><br></div>";
   echo $textoHTML;
   ?>
+<div class="gridGeneralConf">
+  <div class="gridConf">
 
-  <div>
     <form id="formularioUsuario">
       <legend class="legend">Informació de l'usuari:</legend>
       <label>Nom:</label><br>
@@ -49,15 +50,22 @@ include 'header.php';
       <label>Correu:</label><br>
       <input type="email" name="correo" id="correo" placeholder="Email/Correu" required><br><br>
     </form>
+    </div>
     <!-- El botón del forms está fuera porque sinó reinicia la página cuando haces click 
         Este botón utiliza el require pero borra el formulario, no vale
         <input type="button"  value="Confirmar" id="confirmar">
     -->
-    <button id="confirmar" onclick="validarFormulario()">Confirmar</button>
+    
     <!-- Div que se oculta o se muestra con los mensajes de error referentes al formulario -->
-    <div id="mensajeError">
+    <div class="gridConf">
+      <div class="errorForm" id="mensajeError">
 
+      </div>
     </div>
+    <script>
+      iniciar();
+    </script>
+<button id="confirmar" onclick="validarFormulario()">Confirmar</button>
     <br>
     <br>
 

@@ -12,7 +12,7 @@ table, td, th {
   
   table {
     border-collapse: collapse;
-    width: 40%;
+    width: 60%;
     background-color: white;
   }
   legend {
@@ -28,6 +28,9 @@ table, td, th {
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
   }
+  ul{
+    list-style: none;
+  }
   .thTitTab {
     background-color: #5DCFCB;
     color: #113D9A;
@@ -42,11 +45,28 @@ table, td, th {
     height: 2vw;
     width: 21.20vw;
   }
+
   .divGeneralComanda p{
     text-align: right;
     font-size: 1vw;
     margin-bottom: 0.5vw;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .gridGeneralConf{
+    width: 100%;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 70% auto;
+    padding: 0.2vw;
+  }
+  #mensajeError{
+    font-size: 1vw;
+    text-align: left;
+    line-height: 2.2vw;
+    color: red;
+    margin-right: 10vw;
+    margin-top: 5vw;
   }
 
   #confirmar{
@@ -71,7 +91,7 @@ table, td, th {
   }
 
   #formularioUsuario{
-    width: 40%;
+    width: 70%;
     background-color: white;
     margin: auto;
     border: 0.05vw solid black;
@@ -81,14 +101,14 @@ table, td, th {
   #formularioUsuario label{
     display:block; 
     text-align:right;
-    margin-right: 30vw;
+    margin-right: 40vw;
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   #formularioUsuario input{
     width: 50%;
-    margin-left: 10vw;
+    margin-left: 12vw;
     border: 0.05vw solid black;
     font-size: 1vw;
     
