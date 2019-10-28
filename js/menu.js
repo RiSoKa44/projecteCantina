@@ -8,6 +8,7 @@ if (hores < 11 || (hores == 11 && minuts < 30)) {
 }
 
 var arrayPedidos = new Map();
+var idPedidos = [];
 
 function addCesta(id, nombre, preu) {
     var cantidad;
@@ -22,6 +23,7 @@ function addCesta(id, nombre, preu) {
         arrayPedidos.set(nombre, [cantidadMap + cantidad, +preu, (cantidadMap+cantidad) * preu]);
     } else {
         arrayPedidos.set(nombre, [+cantidad, +preu, cantidad * preu]);
+        idPedidos.push(nombre);
     }
 
     actualizarCestaCompra();
@@ -34,11 +36,37 @@ function actualizarCestaCompra(){
         var li = document.createElement("li");
         li.className = 'list-group-item mx-4';
         li.innerHTML = '<label class="fontNormal">'+clave+'</label>'+
-                        '<button class="btnCarrito" > - </button>'+
+                        '<button class="btnCarrito" onclick="botonMenos('+idPedidos.indexOf(clave)+')"> - </button>'+
                         '<label class="fontNormal">'+valor[0]+'</label>'+
-                        '<button class="btnCarrito"> + </button>';
+                        '<button class="btnCarrito" onclick="botonMas('+idPedidos.indexOf(clave)+')"> + </button>';
         listaCompra.appendChild(li);
     });
+}
+
+function botonMenos(idArray){
+    var nombre = idPedidos[idArray];
+    var cantidadMap = arrayPedidos.get(nombre)[0];
+    var preu = arrayPedidos.get(nombre)[1];
+    
+    cantidadMap--;
+    if(cantidadMap == 0){
+        arrayPedidos.delete(nombre);
+    }else{
+        arrayPedidos.set(nombre, [cantidadMap, +preu, (cantidadMap) * preu]);
+    }
+
+    actualizarCestaCompra();
+}
+
+function botonMas(idArray){
+    var nombre = idPedidos[idArray];
+    var cantidadMap = arrayPedidos.get(nombre)[0];
+    var preu = arrayPedidos.get(nombre)[1];
+
+    cantidadMap++;
+    arrayPedidos.set(nombre, [cantidadMap, +preu, (cantidadMap) * preu]);
+
+    actualizarCestaCompra();
 }
 
 function comprar(){
