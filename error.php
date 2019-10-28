@@ -6,8 +6,8 @@
 <body>
     <?php
     echo '<div>
-            <p>Ja heu fet una comanda avui!</p>
-            <button onclick="location.href=\'landing.php\'">Tornar</button>
+            <p class="errorMsg">Ja heu fet una comanda avui!</p>
+            <button class="btnError" onclick="location.href=\'landing.php\'">Tornar</button>
         </div>';
 
     ?>

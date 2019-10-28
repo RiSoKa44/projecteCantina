@@ -9,7 +9,7 @@ include 'header.php';
     #Comprobar que hay pedidos
     if (!isset($_COOKIE['datosPedido'])) {
         echo '<div>
-            <label>Error! No hi ha comandes.</label>
+            <label class="finComandaError">Error! No hi ha comandes.</label>
         </div>';
     } else {
         #Crear cookie para no poder pedir dos veces en un mismo día
@@ -39,11 +39,12 @@ include 'header.php';
         }
 
         echo '<div>
-                <label>Comanda confirmada correctament!</label>
+                <label class="finComandaConfirmar">Comanda confirmada correctament!</label>
             </div>';
     }
     ?>
-
+    <button class="btnMenuFinComanda" type="button" onclick="confirmadoFinal()">Acabar compra</button>
+    <script type="text/javascript" src="js/finComanda.js"></script>
 </body>
 <?php
 include 'footer.php';

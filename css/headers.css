@@ -3,12 +3,9 @@
 }
 #divHeader{
     margin-top: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: 20px;
     border-style: inherit;
     border-width: medium;
-    background-color: #39bab5;
     background-image: url("../img/listaprodbis.jpg");
     width: auto;
     height: 7vw;

@@ -1,4 +1,3 @@
-
 // Validaciones del formulario
 function validarFormulario() {
     let todoCorrecto = true;

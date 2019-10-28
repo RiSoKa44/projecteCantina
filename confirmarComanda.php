@@ -18,7 +18,7 @@ include 'header.php';
     header('Location: error.php');  
   }
 
-  $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th>Producte</th><th>Quantitat</th><th>Preu Unitari</th><th>Preu Total</th></tr></thead>";
+  $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th class='thTitTab'>Producte</th><th class='thTitTab'>Quantitat</th><th class='thTitTab'>Preu Unitari</th><th class='thTitTab'>Preu Total</th></tr></thead>";
 
   $precioTotal = 0;
 
@@ -36,28 +36,36 @@ include 'header.php';
   $textoHTML .= "<p class='totalPrecioTxt'>Preu total: &nbsp &nbsp " . $precioTotal . "€</p><br></div>";
   echo $textoHTML;
   ?>
+<div class="gridGeneralConf">
+  <div class="gridConf">
 
-  <div>
     <form id="formularioUsuario">
-      <legend>Informació de l'usuari:</legend>
+      <legend class="legend">Informació de l'usuari:</legend>
       <label>Nom:</label><br>
-      <input type="text" name="nombre" id="nombre" required><br>
+      <input type="text" name="nombre" id="nombre" placeholder="Nom" autofocus required><br>
       <label>Cognom:</label><br>
-      <input type="text" name="apellido" id="apellido"><br>
+      <input type="text" name="apellido" id="apellido" placeholder="Cognom"><br>
       <label>Telèfon:</label><br>
-      <input type="tel" name="telefono" id="telefono" required><br>
+      <input type="tel" name="telefono" id="telefono" placeholder="Teléfon" required><br>
       <label>Correu:</label><br>
-      <input type="email" name="correo" id="correo" required><br><br>
+      <input type="email" name="correo" id="correo" placeholder="Email/Correu" required><br><br>
     </form>
+    </div>
     <!-- El botón del forms está fuera porque sinó reinicia la página cuando haces click 
         Este botón utiliza el require pero borra el formulario, no vale
         <input type="button"  value="Confirmar" id="confirmar">
     -->
-    <button id="confirmar" onclick="validarFormulario()">Confirmar</button>
+    
     <!-- Div que se oculta o se muestra con los mensajes de error referentes al formulario -->
-    <div id="mensajeError">
+    <div class="gridConf">
+      <div class="errorForm" id="mensajeError">
 
+      </div>
     </div>
+    <script>
+      iniciar();
+    </script>
+<button id="confirmar" onclick="validarFormulario()">Confirmar</button>
     <br>
     <br>
 

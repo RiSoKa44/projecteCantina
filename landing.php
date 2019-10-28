@@ -4,6 +4,7 @@
 <?php
     include 'header.php';
 ?>
+
 <body>
 <div class="general">
 <div class="container">
@@ -64,7 +65,8 @@
         }else{
             $ruta = 'menu.php';
         }
-        echo '<button class="btnLand" onclick="location.href=\''.$ruta.'\'">Avançar</button>';
+        echo '<button class="btnLand" onclick="location.href=\''.$ruta.'\'">Accés administador</button>';
+        echo '<button class="btnLand" onclick="location.href=\''.$ruta.'\'">Accés usuari</button>';
     ?>
     
 </div>
@@ -73,8 +75,5 @@
 <?php
     include 'footer.php';
 ?>
-
-
-
 
 </html>

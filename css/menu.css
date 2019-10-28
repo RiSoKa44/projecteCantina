@@ -1,8 +1,11 @@
+body{
+  background-color: rgba(57, 186, 181, 0.1);
+}
+
 #capsulaDiv {
   width: 100%;
   border-style: inherit;
   border-width: medium;
-  background-color: #6D8FD7;
 }
 
 .addCesta {
@@ -28,20 +31,24 @@
   margin: auto;
   display: grid;
   grid-template-columns: 75% 25%;
-  background-color: #9BB4E9;
   padding: 0.2vw;
+}
+.gridListaItem{
+  max-height: 445px;
+  margin-bottom: 10px;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
 }
 .grid-container {
   width: 70%;
   margin-left: 15vw;
   display: grid;
   grid-template-columns: 35% 35% 15%;
-  background-color: #9BB4E9;
   padding: 0.5vw;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(57, 186, 181, 0.3);
   border: 0.01vw solid rgba(63, 62, 62, 0.8);
   padding: 0.5vw;
   font-size: 1.4vw;

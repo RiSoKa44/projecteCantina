@@ -1,3 +1,7 @@
+body{
+    background-color: rgba(57, 186, 181, 0.1);
+  }
+  
 .container{
     width: 700px;
     height: 10%;
