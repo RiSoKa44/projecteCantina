@@ -10,6 +10,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/headers.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/landing.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/confirmarComanda.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/finComanda.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/error.css'>
 
     <script src='main.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

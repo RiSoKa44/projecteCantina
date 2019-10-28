@@ -18,7 +18,7 @@ include 'header.php';
     header('Location: error.php');  
   }
 
-  $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th>Producte</th><th>Quantitat</th><th>Preu Unitari</th><th>Preu Total</th></tr></thead>";
+  $textoHTML = "<div class='divGeneralComanda'> <table><thead><tr><th class='thTitTab'>Producte</th><th class='thTitTab'>Quantitat</th><th class='thTitTab'>Preu Unitari</th><th class='thTitTab'>Preu Total</th></tr></thead>";
 
   $precioTotal = 0;
 

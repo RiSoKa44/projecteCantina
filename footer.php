@@ -65,6 +65,5 @@
     <a href="https://mdbootstrap.com/education/bootstrap/"> Ins_Pedralbes_LosJavisYYah</a>
   </div>
   <!-- Copyright -->
-
 </footer>
 <!-- Footer -->

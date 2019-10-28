@@ -4,6 +4,7 @@
 <?php
     include 'header.php';
 ?>
+
 <body>
 <div class="general">
 <div class="container">
@@ -73,8 +74,5 @@
 <?php
     include 'footer.php';
 ?>
-
-
-
 
 </html>

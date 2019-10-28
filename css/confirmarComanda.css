@@ -28,7 +28,7 @@ table, td, th {
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
   }
-  th {
+  .thTitTab {
     background-color: #5DCFCB;
     color: #113D9A;
     font-size: 1vw;

@@ -10,10 +10,13 @@ include 'header.php';
             <div class="gridListaItem">
                 <?php
                 $menuPati = [
-                    ['BOCATA DE JAMÓN', 'imgBocata.jpg', 2.00]
+                    ['Bocata de jamón', 'bocadillo.jpg', 2.00],
+                    ['Bocata de queso', 'bocQueso.jpg', 1.50],
+                    ['Café con leche', 'cafeleche.jpg', 1.20],
+                    ['Donut', 'donut.jpg', 1.00]
                 ];
                 $menuDinar = [
-                    ['Bocata chorizo', 'imgBocata.jpg', 3.59]
+                    ['Bocata tortilla', 'imgBocata.jpg', 3.59]
                 ];
 
                 echo '<div id="menuPati">';
@@ -74,6 +77,7 @@ include 'header.php';
 
         <script type="text/javascript" src="js/menu.js"></script>
 </body>
+
 <?php
 include 'footer.php';
 ?>

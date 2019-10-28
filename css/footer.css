@@ -1,5 +1,5 @@
-footer{
-    border-top: 1px solid black;
+.container-fluid{
+    background-color: rgba(57, 186, 181, 0.1);
 }
 .text-uppercase{
     font-size: 0.7vw;
