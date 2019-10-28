@@ -39,15 +39,15 @@ include 'header.php';
 
   <div>
     <form id="formularioUsuario">
-      <legend>Informació de l'usuari:</legend>
+      <legend class="legend">Informació de l'usuari:</legend>
       <label>Nom:</label><br>
-      <input type="text" name="nombre" id="nombre" required><br>
+      <input type="text" name="nombre" id="nombre" placeholder="Nom" autofocus required><br>
       <label>Cognom:</label><br>
-      <input type="text" name="apellido" id="apellido"><br>
+      <input type="text" name="apellido" id="apellido" placeholder="Cognom"><br>
       <label>Telèfon:</label><br>
-      <input type="tel" name="telefono" id="telefono" required><br>
+      <input type="tel" name="telefono" id="telefono" placeholder="Teléfon" required><br>
       <label>Correu:</label><br>
-      <input type="email" name="correo" id="correo" required><br><br>
+      <input type="email" name="correo" id="correo" placeholder="Email/Correu" required><br><br>
     </form>
     <!-- El botón del forms está fuera porque sinó reinicia la página cuando haces click 
         Este botón utiliza el require pero borra el formulario, no vale

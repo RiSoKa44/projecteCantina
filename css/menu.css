@@ -1,8 +1,11 @@
+body{
+  background-color: rgba(57, 186, 181, 0.1);
+}
+
 #capsulaDiv {
   width: 100%;
   border-style: inherit;
   border-width: medium;
-  background-color: #6D8FD7;
 }
 
 .addCesta {
