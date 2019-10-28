@@ -58,7 +58,7 @@
 
 <div>
     <?php
-        $avui = date('d/m/Y', time());
+        $avui = date('d-m-Y', time());
         $ruta;
         if(isset($_COOKIE['ultimaComanda']) && $_COOKIE['ultimaComanda'] == $avui){
             $ruta = 'error.php';
