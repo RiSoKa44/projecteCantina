@@ -13,8 +13,11 @@
         <!-- Content -->
         <h5 class="text-uppercase">Cantina Pedralbes</h5>
         <p></p>
-        <p class="descripcion">Cantina del insitut pedralbes,<br> pagina web desanvolupada per el grup "Los Javis Y Yah"</p>
-        
+        <p class="descripcion"><strong>Horari: </strong> Obert de Dilluns a Divendres de 08:00 a 21:00 hores.</p>
+        <p class="descripcion"><strong>Teléfono: </strong> 932 033 332"</p>
+        <p class="descripcion"><strong>Adreça electrónica: </strong> 
+          <a href="mailto:a8076391@xtec.cat" target="_blank" rel="noopener noreferrer">a8076391@xtec.cat</a>
+        </p>
 
       </div>
 

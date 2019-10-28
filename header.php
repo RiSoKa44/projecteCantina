@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/menu.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/headers.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/landing.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/confirmarComanda.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/finComanda.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/error.css'>
