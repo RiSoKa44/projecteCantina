@@ -79,6 +79,7 @@ include 'header.php';
         <?php
         echo '<button class="btnMenu" type="button" onclick="comprar()">Ir a pagar</button>';
         ?>
+        <button id="volver" onclick=" location.href='landing.php' ">Tornar enrere</button>
 
         <script type="text/javascript" src="js/menu.js"></script>
 </body>
