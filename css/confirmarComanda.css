@@ -31,6 +31,15 @@ table, td, th {
   ul{
     list-style: none;
   }
+
+  .titConfCom{
+    text-align: center;
+    font-size: 2vw;
+    margin-left: 43.5%;
+    width: 12.5vw;
+    border-bottom: 0.5px solid black;
+  }
+
   .thTitTab {
     background-color: #5DCFCB;
     color: #113D9A;
@@ -77,7 +86,16 @@ table, td, th {
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
     border: 0.05vw solid black;
-    background-color: #9BB4E9;
+   background-color: #1ba6a1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.1vw;
+    opacity: 0.9;
+    text-align: center;
+    height: 3vw;
+    color: white;
   }
   #volver{
     width: 10%;
@@ -87,7 +105,16 @@ table, td, th {
     font-size: 0.75vw;
     font-family: Arial, Helvetica, sans-serif;
     border: 0.05vw solid black;
-    background-color: #9BB4E9;
+    background-color: #1ba6a1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.1vw;
+    opacity: 0.9;
+    text-align: center;
+    height: 3vw;
+    color: white;
   }
 
   #formularioUsuario{

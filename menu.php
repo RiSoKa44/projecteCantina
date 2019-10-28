@@ -16,7 +16,12 @@ include 'header.php';
                     ['Donut', 'donut.jpg', 1.00]
                 ];
                 $menuDinar = [
-                    ['Bocata tortilla', 'imgBocata.jpg', 3.59]
+                    ['Bocata tortilla', 'imgBocata.jpg', 3.59],
+                    ['Bocata de queso', 'bocQueso.jpg', 2.00],
+                    ['Patatas', 'patatas.jpg', 1.00],
+                    ['Café con leche', 'cafeleche.jpg', 1.10],
+                    ['Té', 'tes.jpg', 1.20],
+                    ['Croussant', 'crous.jpg', 1.00]
                 ];
 
                 echo '<div id="menuPati">';

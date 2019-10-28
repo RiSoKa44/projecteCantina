@@ -22,18 +22,18 @@ function validarFormulario() {
     }
 
     //Comprobar que el telefono contiene letras
-    if (telefono != "" && telefono != undefined && telefono != " "){
-        let telefonoConCaracteres=false;
-        for(i=0; i<telefono.length; i++){
-            if (!/^([0-9])*$/.test(telefono.charAt(i))){
-                telefonoConCaracteres=true;
+    if (telefono != "" && telefono != undefined && telefono != " ") {
+        let telefonoConCaracteres = false;
+        for (i = 0; i < telefono.length; i++) {
+            if (!/^([0-9])*$/.test(telefono.charAt(i))) {
+                telefonoConCaracteres = true;
             }
-         }
-         if(telefonoConCaracteres){
+        }
+        if (telefonoConCaracteres) {
             textoAlerta += "<li>El número de telèfon no és vàlid </li>";
             todoCorrecto = false;
-         }
-         
+        }
+
     }
     //Saber si los campos están vacíos
     if (nombre == "" || nombre == undefined || nombre == " ") {
@@ -52,16 +52,16 @@ function validarFormulario() {
     if (todoCorrecto) {
         document.getElementById("mensajeError").style.display = "none";
         //Crear objeto usuario
-        let usuarioObj={
-                "mail": mail,
-                "nombre":nombre,
-                "apellido":apellido,
-                "telefono":telefono,
+        let usuarioObj = {
+            "mail": mail,
+            "nombre": nombre,
+            "apellido": apellido,
+            "telefono": telefono,
         };
 
         //Unir a usuarioObj sus pedidos
         //Guardar cookie con todos los datos completos del pedido
-        document.cookie = "datosPedido="+unirPedidoAUsuario(usuarioObj);
+        document.cookie = "datosPedido=" + unirPedidoAUsuario(usuarioObj);
         //Cambiar de página
         location.href = "finComanda.php";
     }
@@ -77,25 +77,40 @@ function validarFormulario() {
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0){
-            return c.substring(nameEQ.length,c.length);
-        } 
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
     }
     return null;
 }
 
 
 //Función que coge el objeto de usuruario, recoge los datos del pedido con las cookies y los junta
-function unirPedidoAUsuario(usuarioObj){
+function unirPedidoAUsuario(usuarioObj) {
     //Variable de texto que guarda un formato JSON
-    let usuarioJSON='"'+usuarioObj["mail"]+'":{"nombre":"'+usuarioObj["nombre"]+'","apellido":"'+usuarioObj["apellido"]+'","telefono":'+usuarioObj["telefono"]+',"pedido":[';
+    let usuarioJSON = '"' + usuarioObj["mail"] + '":{"nombre":"' + usuarioObj["nombre"] + '","apellido":"' + usuarioObj["apellido"] + '","telefono":' + usuarioObj["telefono"] + ',"pedido":';
     //Leer la cookie de pedidos y la une a la variable de texto JSON
-    usuarioJSON+=readCookie("pedidos")+"]}";
+    //let pedidoJSON = JSON.stringify(formatarPedidosAObjeto());
+    usuarioJSON += formatarPedidosAStringJSON() + "}";
     //Devuelve el texto en formato JSON
     return usuarioJSON;
 
 }
 
+
+// Formar String de los pedidos en un formato JSON para añadirlos después
+function formatarPedidosAStringJSON(){
+    let textoJSON="{";
+    let jsonPedidos = JSON.parse(readCookie("pedidos"));
+    for (const prop in jsonPedidos) {
+        textoJSON+=`"`+prop+`":{`;
+        textoJSON+= `"unidades":`+ jsonPedidos[prop][0]+`,`,
+        textoJSON+=`"precio unidad":`+ jsonPedidos[prop][1]+`,`,
+        textoJSON+=`"precio total": `+jsonPedidos[prop][2]+`},`
+    }
+    textoJSON=textoJSON.slice(0,-1)+ "}";
+    return textoJSON;
+}

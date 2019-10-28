@@ -5,7 +5,7 @@ include 'header.php';
 ?>
 
 <body>
-  <h1>Confirmació de comanda</h1>
+  <h1 class="titConfCom">Confirmació de comanda</h1>
 
   <?php
   

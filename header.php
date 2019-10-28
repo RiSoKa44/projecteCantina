@@ -12,6 +12,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/confirmarComanda.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/finComanda.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/error.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/rebote.css'>
 
     <script src='main.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
