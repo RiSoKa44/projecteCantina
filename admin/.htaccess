@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Credencials per accedir a admin :"
+AuthUserFile "/home/a15javmadcer/public_html/.htpasswd"
+Require valid-user
