@@ -71,7 +71,7 @@ function botonMas(idArray){
 
 function comprar(){
     if(arrayPedidos.size == 0){
-    swal ( "Oops" ,  "La seva cistella esta buida" ,  "error" )
+    swal ( "Oops" ,  "La seva cistella esta buida" ,  "error" );
     }else{
         document.cookie = "pedidos="+JSON.stringify((mapToObj()));
         location.href = 'confirmarComanda.php';
