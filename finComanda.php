@@ -15,7 +15,6 @@ include 'header.php';
         #Crear cookie para no poder pedir dos veces en un mismo día
         $avui = date('d-m-Y', time());
         setcookie('ultimaComanda', $avui);
-
         #Coger la cookie que contiene una string con el pedido
         $datosPedido = $_COOKIE['datosPedido'];
         $ruta = 'admin'.DIRECTORY_SEPARATOR.'comandes'.DIRECTORY_SEPARATOR.'comanda_' . $avui . '.json';
