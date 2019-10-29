@@ -15,16 +15,15 @@ include 'header.php';
         #Crear cookie para no poder pedir dos veces en un mismo día
         $avui = date('d-m-Y', time());
         setcookie('ultimaComanda', $avui);
-
         #Coger la cookie que contiene una string con el pedido
         $datosPedido = $_COOKIE['datosPedido'];
-
+        $ruta = 'admin'.DIRECTORY_SEPARATOR.'comandes'.DIRECTORY_SEPARATOR.'comanda_' . $avui . '.json';
         #Comrpobar si ya se han hecho pedidos hoy y si el fichero existe
         #Si existe, coge los datos del fichero y les une los nuevos datos del usuario con su pedido
-        if (file_exists('admin/comandes/comanda_' . $avui . '.json')) {
+        if (file_exists($ruta)) {
 
             #Recoger los datos del fichero en formato texto
-            $datosPedidoJson = file_get_contents('admin/comandes/comanda_' . $avui . '.json');
+            $datosPedidoJson = file_get_contents($ruta);
             #Quitar los {} del principio y del final del texto
             $datosPedidoJson = substr($datosPedidoJson, 1, strlen($datosPedidoJson) - 2);
             #Unir datos nuevos a los antiguos
@@ -32,10 +31,10 @@ include 'header.php';
             #Formatar para JSON
             $textoEnJson = "{" . $datosPedidoJson . "}";
             #Añadir al fichero JSON final
-            file_put_contents('admin/comandes/comanda_' . $avui . '.json', $textoEnJson);
+            file_put_contents($ruta, $textoEnJson);
         } else {
             $textoEnJson = "{" . $datosPedido . "}";
-            file_put_contents('admin/comandes/comanda_' . $avui . '.json', $textoEnJson);
+            file_put_contents($ruta, $textoEnJson);
         }
 
         echo '<div>

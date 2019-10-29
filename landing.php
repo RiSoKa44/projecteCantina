@@ -58,8 +58,9 @@
 
 <div>
     <?php
-        $avui = date('d/m/Y', time());
+        $avui = date('d-m-Y', time());
         $ruta;
+        /** Comprueba si existe cookie ultimaComanda y si es igual a la de hoy */
         if(isset($_COOKIE['ultimaComanda']) && $_COOKIE['ultimaComanda'] == $avui){
             $ruta = 'error.php';
         }else{

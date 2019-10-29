@@ -1,4 +1,4 @@
-// Validaciones del formulario
+/** Función principal para validar el formulario */ 
 function validarFormulario() {
     let todoCorrecto = true;
     let textoAlerta = "<ul>";
@@ -73,7 +73,7 @@ function validarFormulario() {
 
 }
 
-//Leer la cookie y devolver su valor
+/** Función para leer la cookie y devolver su contenido */
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -88,7 +88,7 @@ function readCookie(name) {
 }
 
 
-//Función que coge el objeto de usuruario, recoge los datos del pedido con las cookies y los junta
+/** Función que coge el objeto de usuario, recoge los datos del pedido con las cookies y los une */
 function unirPedidoAUsuario(usuarioObj) {
     //Variable de texto que guarda un formato JSON
     let usuarioJSON = '"' + usuarioObj["mail"] + '":{"nombre":"' + usuarioObj["nombre"] + '","apellido":"' + usuarioObj["apellido"] + '","telefono":' + usuarioObj["telefono"] + ',"pedido":';
@@ -101,7 +101,7 @@ function unirPedidoAUsuario(usuarioObj) {
 }
 
 
-// Formar String de los pedidos en un formato JSON para añadirlos después
+/** Función para formar una String de los pedidos en un formato JSON */
 function formatarPedidosAStringJSON(){
     let textoJSON="{";
     let jsonPedidos = JSON.parse(readCookie("pedidos"));
