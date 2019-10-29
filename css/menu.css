@@ -34,7 +34,7 @@ body{
   padding: 0.2vw;
 }
 .gridListaItem{
-  max-height: 445px;
+  max-height: 650px;
   margin-bottom: 10px;
   overflow:auto;
   -webkit-overflow-scrolling: touch;

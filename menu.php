@@ -11,9 +11,11 @@ include 'header.php';
                 <?php
                 $menuPati = [
                     ['Bocata de jamón', 'bocadillo.jpg', 2.00],
-                    ['Bocata de queso', 'bocQueso.jpg', 1.50],
                     ['Café con leche', 'cafeleche.jpg', 1.20],
-                    ['Donut', 'donut.jpg', 1.00]
+                    ['Donut', 'donut.jpg', 1.00],
+                    ['Bocata de queso', 'bocQueso.jpg', 1.50],
+                    ['Panecillos', 'panecillos.jpg', 1.25]
+                   
                 ];
                 $menuDinar = [
                     ['Bocata tortilla', 'imgBocata.jpg', 3.59],
