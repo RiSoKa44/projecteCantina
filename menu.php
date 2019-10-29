@@ -9,6 +9,7 @@ include 'header.php';
         <div class="gridGeneral">
             <div class="gridListaItem">
                 <?php
+                /** Base de datos de los productos del menú */
                 $menuPati = [
                     ['Bocata de jamón', 'bocadillo.jpg', 2.00],
                     ['Café con leche', 'cafeleche.jpg', 1.20],
@@ -26,6 +27,7 @@ include 'header.php';
                     ['Croussant', 'crous.jpg', 1.00]
                 ];
 
+                /** Imprime cada producto del array $menuPati en la página web */
                 echo '<div id="menuPati">';
                 for ($i = 0; $i < sizeof($menuPati); $i++) {
                     $elemento = $menuPati[$i];
@@ -47,7 +49,8 @@ include 'header.php';
                     </div>';
                 }
                 echo '</div>';
-
+                
+                /** Imprime cada producto del array $menuDinar en la página web */
                 echo '<div id="menuDinar">';
                 for ($i = 0; $i < sizeof($menuDinar); $i++) {
                     $elemento = $menuDinar[$i];
@@ -71,6 +74,7 @@ include 'header.php';
                 echo '</div>';
                 ?>
             </div>
+            <!-- divs con la lista de la compra. Se añaden los elementos en menu.js -->
             <div class="gridListaItem">
                 <div class="cestaImpostor">
                     <h2 class="listaCompra">Cesta de la compra</h2>
